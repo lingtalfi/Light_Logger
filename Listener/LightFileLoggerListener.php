@@ -151,10 +151,10 @@ class LightFileLoggerListener implements LightLoggerListenerInterface
      *
      * @implementation
      */
-    public function listen(string $msg, string $channel)
+    public function log(string $message, string $channel): void
     {
         // first log
-        FileTool::append($msg . PHP_EOL, $this->file);
+        FileTool::append($message . PHP_EOL, $this->file);
 
         // then handle rotation
         if (true === $this->isFileRotationEnabled) {

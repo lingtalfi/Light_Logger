@@ -1,6 +1,7 @@
 dependencies: 
     Ling: 
         - Bat
+        - UniversalLogger
     
 
 post_install: 

@@ -72,6 +72,11 @@ logger:
 History Log
 =============
 
+- 1.1.0 -- 2019-08-30
+
+    - renamed LightLoggerListenerInterface->listen to log
+    - update LightLoggerListenerInterface now extends UniversalLoggerInterface
+    
 - 1.0.0 -- 2019-08-01
 
     - initial commit

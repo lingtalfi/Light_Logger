@@ -1,6 +1,6 @@
 Ling/Light_Logger
 ================
-2019-08-01 --> 2019-08-01
+2019-08-01 --> 2019-08-30
 
 
 
@@ -22,13 +22,14 @@ Table of contents
 - [LightFileLoggerListener](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener.md) &ndash; The LightFileLoggerListener class is a simple logger listener which writes the log messages to a specified file.
     - [LightFileLoggerListener::__construct](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/__construct.md) &ndash; Builds the LightFileLoggerListener instance.
     - [LightFileLoggerListener::configure](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/configure.md) &ndash; Configures this instance.
-    - [LightFileLoggerListener::listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/listen.md) &ndash; and possibly rotates the file when the file size gets too big.
+    - [LightFileLoggerListener::log](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/log.md) &ndash; and possibly rotates the file when the file size gets too big.
 - [LightLoggerListenerInterface](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLoggerListenerInterface.md) &ndash; The LightLoggerListenerInterface interface is the interface for all logger listeners.
-    - [LightLoggerListenerInterface::listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLoggerListenerInterface/listen.md) &ndash; Reacts to the given logger message in a specific way.
+    - UniversalLoggerInterface::log &ndash; Sends a the log $message to the given $channel.
 
 
 Dependencies
 ============
 - [Bat](https://github.com/lingtalfi/Bat)
+- [UniversalLogger](https://github.com/lingtalfi/UniversalLogger)
 
 
