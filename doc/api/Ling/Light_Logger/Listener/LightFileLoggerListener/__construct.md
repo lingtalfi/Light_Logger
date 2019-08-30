@@ -46,7 +46,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightFileLoggerListener::__construct](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L107-L115)
+See the source code for method [LightFileLoggerListener::__construct](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L108-L116)
 
 
 See Also

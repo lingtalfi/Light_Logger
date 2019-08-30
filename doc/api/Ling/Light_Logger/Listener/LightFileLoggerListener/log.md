@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [LightFileLoggerListener::log](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/log.md)(string $message, string $channel) : void
+public [LightFileLoggerListener::log](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/log.md)(?$message, string $channel) : void
 
 
 
@@ -58,7 +58,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightFileLoggerListener::log](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L154-L183)
+See the source code for method [LightFileLoggerListener::log](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L155-L186)
 
 
 See Also

@@ -5,6 +5,7 @@ namespace Ling\Light_Logger\Listener;
 
 
 use Ling\Bat\ConvertTool;
+use Ling\Bat\DebugTool;
 use Ling\Bat\FileSystemTool;
 use Ling\Bat\FileTool;
 use Ling\Bat\ZipTool;
@@ -151,8 +152,10 @@ class LightFileLoggerListener implements LightLoggerListenerInterface
      *
      * @implementation
      */
-    public function log(string $message, string $channel): void
+    public function log($message, string $channel): void
     {
+        $message = DebugTool::toString($message);
+
         // first log
         FileTool::append($message . PHP_EOL, $this->file);
 

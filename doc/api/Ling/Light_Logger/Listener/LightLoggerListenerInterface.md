@@ -32,7 +32,7 @@ Class synopsis
 abstract class <span class="pl-k">LightLoggerListenerInterface</span> implements [UniversalLoggerInterface](https://github.com/lingtalfi/UniversalLogger) {
 
 - Inherited methods
-    - abstract public UniversalLoggerInterface::log(string $message, string $channel) : void
+    - abstract public UniversalLoggerInterface::log(?$message, string $channel) : void
 
 }
 
