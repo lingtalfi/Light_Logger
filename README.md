@@ -72,6 +72,10 @@ logger:
 History Log
 =============
 
+- 1.3.0 -- 2019-08-30
+
+    - add LightLoggerService property: useExpandedArray
+    
 - 1.2.1 -- 2019-08-30
 
     - update LightLoggerService, now implements UniversalLoggerInterface

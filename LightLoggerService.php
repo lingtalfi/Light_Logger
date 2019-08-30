@@ -4,6 +4,7 @@
 namespace Ling\Light_Logger;
 
 
+use Ling\ArrayToString\ArrayToStringTool;
 use Ling\Bat\DebugTool;
 use Ling\Light_Logger\Listener\LightLoggerListenerInterface;
 use Ling\UniversalLogger\UniversalLoggerInterface;
@@ -87,12 +88,24 @@ class LightLoggerService implements UniversalLoggerInterface
     private $format;
 
     /**
+     * This property holds whether to use the useExpandedArray for this instance.
+     * With useExpandedArray on, the arrays will be indented with tab and return chars in the log file,
+     * whereas with useExpandedArray off, the array will fit on a single line.
+     *
+     * Default is true (as it's more readable).
+     *
+     * @var bool=true
+     */
+    private $useExpandedArray;
+
+    /**
      * Builds the LightLoggerService instance.
      */
     public function __construct()
     {
         $this->listeners = [];
         $this->format = '[{channel}]: {dateTime} -- {message}';
+        $this->useExpandedArray = true;
     }
 
 
@@ -130,6 +143,16 @@ class LightLoggerService implements UniversalLoggerInterface
     public function setFormat(string $format)
     {
         $this->format = $format;
+    }
+
+    /**
+     * Sets the useExpandedArray.
+     *
+     * @param bool $useExpandedArray
+     */
+    public function setUseExpandedArray(bool $useExpandedArray)
+    {
+        $this->useExpandedArray = $useExpandedArray;
     }
 
 
@@ -257,7 +280,11 @@ class LightLoggerService implements UniversalLoggerInterface
      */
     protected function getFormattedMessage(string $channel, $msg): string
     {
-        $msg = DebugTool::toString($msg);
+        if (true === $this->useExpandedArray && is_array($msg)) {
+            $msg = ArrayToStringTool::toPhpArray($msg);
+        } else {
+            $msg = DebugTool::toString($msg);
+        }
         return str_replace([
             '{channel}',
             '{dateTime}',

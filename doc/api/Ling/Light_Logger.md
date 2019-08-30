@@ -12,6 +12,7 @@ Table of contents
     - [LightLoggerService::__construct](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/LightLoggerService/__construct.md) &ndash; Builds the LightLoggerService instance.
     - [LightLoggerService::addListener](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/LightLoggerService/addListener.md) &ndash; Registers a listener ($callable) for the given $channel(s).
     - [LightLoggerService::setFormat](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/LightLoggerService/setFormat.md) &ndash; Sets the format of the log messages passed to the listeners.
+    - [LightLoggerService::setUseExpandedArray](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/LightLoggerService/setUseExpandedArray.md) &ndash; Sets the useExpandedArray.
     - [LightLoggerService::log](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/LightLoggerService/log.md) &ndash; Sends a the log $message to the given $channel.
     - [LightLoggerService::trace](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/LightLoggerService/trace.md) &ndash; Dispatches a log message on the "trace" channel.
     - [LightLoggerService::debug](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/LightLoggerService/debug.md) &ndash; Dispatches a log message on the "debug" channel.
@@ -29,6 +30,7 @@ Table of contents
 
 Dependencies
 ============
+- [ArrayToString](https://github.com/lingtalfi/ArrayToString)
 - [Bat](https://github.com/lingtalfi/Bat)
 - [UniversalLogger](https://github.com/lingtalfi/UniversalLogger)
 
