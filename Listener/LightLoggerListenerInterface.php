@@ -4,8 +4,6 @@
 namespace Ling\Light_Logger\Listener;
 
 
-use Ling\UniversalLogger\UniversalLoggerInterface;
-
 /**
  * The LightLoggerListenerInterface interface is the interface for all logger listeners.
  *
@@ -16,7 +14,14 @@ use Ling\UniversalLogger\UniversalLoggerInterface;
  * The behaviour of the logger listener (how the logger listener reacts to the message) is defined in the concrete
  * implementations of this interface.
  */
-interface LightLoggerListenerInterface extends UniversalLoggerInterface
+interface LightLoggerListenerInterface
 {
-
+    /**
+     * Reacts to the given logger message in a specific way.
+     *
+     * @param string $msg
+     * @param string $channel
+     * @return void
+     */
+    public function listen(string $msg, string $channel);
 }

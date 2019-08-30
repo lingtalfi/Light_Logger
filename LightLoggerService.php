@@ -4,7 +4,9 @@
 namespace Ling\Light_Logger;
 
 
+use Ling\Bat\DebugTool;
 use Ling\Light_Logger\Listener\LightLoggerListenerInterface;
+use Ling\UniversalLogger\UniversalLoggerInterface;
 
 /**
  * The LightLoggerService class provides a simple logging system for a light application.
@@ -55,7 +57,7 @@ use Ling\Light_Logger\Listener\LightLoggerListenerInterface;
  *
  *
  */
-class LightLoggerService
+class LightLoggerService implements UniversalLoggerInterface
 {
 
     /**
@@ -132,17 +134,11 @@ class LightLoggerService
 
 
     /**
-     * Dispatches a log message on the given $channel.
-     *
-     * The $msg is a string or an object with the __toString method.
-     *
-     *
-     * @param string|object $msg
-     * @param string $channel
+     * @implementation
      */
-    public function log($msg, string $channel)
+    public function log($message, string $channel): void
     {
-        $this->dispatch($channel, $msg);
+        $this->dispatch($channel, $message);
     }
 
     /**
@@ -261,6 +257,7 @@ class LightLoggerService
      */
     protected function getFormattedMessage(string $channel, $msg): string
     {
+        $msg = DebugTool::toString($msg);
         return str_replace([
             '{channel}',
             '{dateTime}',

@@ -29,10 +29,10 @@ Class synopsis
 ==============
 
 
-abstract class <span class="pl-k">LightLoggerListenerInterface</span> implements [UniversalLoggerInterface](https://github.com/lingtalfi/UniversalLogger) {
+abstract class <span class="pl-k">LightLoggerListenerInterface</span>  {
 
-- Inherited methods
-    - abstract public UniversalLoggerInterface::log(?$message, string $channel) : void
+- Methods
+    - abstract public [listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLoggerListenerInterface/listen.md)(string $msg, string $channel) : void
 
 }
 
@@ -44,7 +44,7 @@ abstract class <span class="pl-k">LightLoggerListenerInterface</span> implements
 Methods
 ==============
 
-- UniversalLoggerInterface::log &ndash; Sends a the log $message to the given $channel.
+- [LightLoggerListenerInterface::listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLoggerListenerInterface/listen.md) &ndash; Reacts to the given logger message in a specific way.
 
 
 

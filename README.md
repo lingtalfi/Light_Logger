@@ -72,6 +72,11 @@ logger:
 History Log
 =============
 
+- 1.2.1 -- 2019-08-30
+
+    - update LightLoggerService, now implements UniversalLoggerInterface
+    - fix LightLoggerListenerInterface implementing UniversalLoggerInterface
+    
 - 1.2.0 -- 2019-08-30
 
     - updated LightLoggerListenerInterface->log to adapt new UniversalLoggerInterface signature

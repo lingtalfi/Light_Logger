@@ -47,7 +47,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [LightFileLoggerListener::getFileFormat](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L197-L204)
+See the source code for method [LightFileLoggerListener::getFileFormat](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L194-L201)
 
 
 See Also
@@ -55,5 +55,5 @@ See Also
 
 The [LightFileLoggerListener](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener.md) class.
 
-Previous method: [log](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/log.md)<br>
+Previous method: [listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/listen.md)<br>
 

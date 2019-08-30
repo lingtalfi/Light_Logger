@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightFileLoggerListener::configure](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L129-L146)
+See the source code for method [LightFileLoggerListener::configure](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L128-L145)
 
 
 See Also
@@ -57,5 +57,5 @@ See Also
 
 The [LightFileLoggerListener](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener.md) class.
 
-Previous method: [__construct](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/__construct.md)<br>Next method: [log](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/log.md)<br>
+Previous method: [__construct](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/__construct.md)<br>Next method: [listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightFileLoggerListener/listen.md)<br>
 

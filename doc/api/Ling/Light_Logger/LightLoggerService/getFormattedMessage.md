@@ -53,7 +53,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [LightLoggerService::getFormattedMessage](https://github.com/lingtalfi/Light_Logger/blob/master/LightLoggerService.php#L262-L273)
+See the source code for method [LightLoggerService::getFormattedMessage](https://github.com/lingtalfi/Light_Logger/blob/master/LightLoggerService.php#L258-L270)
 
 
 See Also
