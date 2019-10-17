@@ -83,6 +83,10 @@ logger:
 History Log
 =============
 
+- 1.4.1 -- 2019-10-17
+
+    - add sentence in the documentation
+    
 - 1.4.0 -- 2019-09-24
 
     - add LightLastMessageFileLoggerListener
