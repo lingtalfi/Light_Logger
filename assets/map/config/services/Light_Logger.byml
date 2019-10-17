@@ -16,15 +16,18 @@ logger:
                         configure:
                             options:
                                 file: ${app_dir}/log/light_log.log
+                minus:
+                    - todo
         -
             method: addListener
             args:
                 channels: todo
                 listener:
-                    instance: Ling\Light_Logger\Listener\LightLastMessageFileLoggerListener
+                    instance: Ling\Light_Logger\Listener\LightFileLoggerListener
                     methods:
-                        setFile:
-                            file: ${app_dir}/log/todo.log
+                        configure:
+                            options:
+                                file: ${app_dir}/log/todo.log
 #        -
 #            method: addListener
 #            args:

@@ -66,15 +66,18 @@ logger:
                         configure:
                             options:
                                 file: ${app_dir}/log/light_log.log
+                minus:
+                    - todo
         -
             method: addListener
             args:
                 channels: todo
                 listener:
-                    instance: Ling\Light_Logger\Listener\LightLastMessageFileLoggerListener
+                    instance: Ling\Light_Logger\Listener\LightFileLoggerListener
                     methods:
-                        setFile:
-                            file: ${app_dir}/log/todo.log
+                        configure:
+                            options:
+                                file: ${app_dir}/log/todo.log
 #        -
 #            method: addListener
 #            args:
@@ -91,6 +94,10 @@ logger:
 History Log
 =============
 
+- 1.5.0 -- 2019-10-17
+
+    - add LightLoggerService->addListener minus argument
+    
 - 1.4.2 -- 2019-10-17
 
     - update README.md
