@@ -6,6 +6,7 @@ namespace Ling\Light_Logger;
 
 use Ling\ArrayToString\ArrayToStringTool;
 use Ling\Bat\DebugTool;
+use Ling\Bat\ExceptionTool;
 use Ling\Light_Logger\Listener\LightLoggerListenerInterface;
 use Ling\UniversalLogger\UniversalLoggerInterface;
 
@@ -301,6 +302,8 @@ class LightLoggerService implements UniversalLoggerInterface
     {
         if (true === $this->useExpandedArray && is_array($msg)) {
             $msg = ArrayToStringTool::toPhpArray($msg);
+        } elseif($msg instanceof \Exception) {
+            $msg = ExceptionTool::toString($msg);
         } else {
             $msg = DebugTool::toString($msg);
         }

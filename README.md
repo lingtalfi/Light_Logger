@@ -94,6 +94,10 @@ logger:
 History Log
 =============
 
+- 1.6.0 -- 2019-11-11
+
+    - update LightLoggerService->getFormattedMessage, now can log \Exception instances
+    
 - 1.5.0 -- 2019-10-17
 
     - add LightLoggerService->addListener minus argument
