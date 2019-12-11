@@ -50,11 +50,6 @@ Here is an example of service configuration:
 ```yaml
 logger:
     instance: Ling\Light_Logger\LightLoggerService
-    methods:
-        setFormat:
-            format: [{channel}]: {dateTime} -- {message}
-        setUseExpandedArray:
-            bool: true
     methods_collection: []
         -
             method: addListener
@@ -66,6 +61,8 @@ logger:
                         configure:
                             options:
                                 file: ${app_dir}/log/light_log.log
+                                format: [{channel}]: {dateTime} -- {message}
+                                expand_array: true
                 minus:
                     - todo
         -
@@ -78,6 +75,8 @@ logger:
                         configure:
                             options:
                                 file: ${app_dir}/log/todo.log
+                                format: [{channel}]: {dateTime} -- {message}
+                                expand_array: true
 #        -
 #            method: addListener
 #            args:
@@ -87,12 +86,20 @@ logger:
 #                    methods:
 #                        setFile:
 #                            file: ${app_dir}/log/light_log_last.txt
+#                        configure:
+#                            options:
+#                                format: [{channel}]: {dateTime} -- {message}
+#                                expand_array: true
 ```
 
 
 
 History Log
 =============
+
+- 1.7.0 -- 2019-12-11
+
+    - update LightLoggerService, the setFormat method has beend moved to the listeners 
 
 - 1.6.0 -- 2019-11-11
 

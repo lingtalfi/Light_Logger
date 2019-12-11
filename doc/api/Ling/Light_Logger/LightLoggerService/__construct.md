@@ -46,7 +46,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightLoggerService::__construct](https://github.com/lingtalfi/Light_Logger/blob/master/LightLoggerService.php#L106-L111)
+See the source code for method [LightLoggerService::__construct](https://github.com/lingtalfi/Light_Logger/blob/master/LightLoggerService.php#L83-L86)
 
 
 See Also

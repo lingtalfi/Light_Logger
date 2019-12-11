@@ -53,7 +53,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightLastMessageFileLoggerListener::listen](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightLastMessageFileLoggerListener.php#L52-L55)
+See the source code for method [LightLastMessageFileLoggerListener::listen](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightLastMessageFileLoggerListener.php#L53-L57)
 
 
 See Also
