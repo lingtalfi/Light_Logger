@@ -124,8 +124,10 @@ class LightFileLoggerListener extends BaseLoggerListener
      *      - maxFileSize
      *      - rotatedFileFormat
      *      - zipRotatedFiles
+     *      - ...more options in the parent class, check it out
      *
      * See the corresponding properties of this class for more info.
+     *
      *
      *
      * @param array $options

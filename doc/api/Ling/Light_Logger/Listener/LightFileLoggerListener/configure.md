@@ -29,6 +29,7 @@ The available options are:
      - maxFileSize
      - rotatedFileFormat
      - zipRotatedFiles
+     - ...more options in the parent class, check it out
 
 See the corresponding properties of this class for more info.
 
@@ -58,7 +59,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightFileLoggerListener::configure](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L133-L152)
+See the source code for method [LightFileLoggerListener::configure](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L135-L154)
 
 
 See Also

@@ -97,6 +97,10 @@ logger:
 History Log
 =============
 
+- 1.7.1 -- 2019-12-11
+
+    - update BaseLoggerListener->configure comment for the documentation 
+    
 - 1.7.0 -- 2019-12-11
 
     - update LightLoggerService, the setFormat method has beend moved to the listeners 
