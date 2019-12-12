@@ -48,6 +48,8 @@ abstract class BaseLoggerListener implements LightLoggerListenerInterface
     }
 
     /**
+     *
+     *
      * Configures this instance.
      * The available options are:
      *

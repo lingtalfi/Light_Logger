@@ -97,6 +97,10 @@ logger:
 History Log
 =============
 
+- 1.7.2 -- 2019-12-12
+
+    - fix BaseLoggerListener->configure documentation comment markdown formatting 
+    
 - 1.7.1 -- 2019-12-11
 
     - update BaseLoggerListener->configure comment for the documentation 

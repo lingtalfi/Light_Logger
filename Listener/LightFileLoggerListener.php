@@ -119,12 +119,12 @@ class LightFileLoggerListener extends BaseLoggerListener
      * Configures this instance.
      *
      * The available options are:
-     *      - file
-     *      - isFileRotationEnabled
-     *      - maxFileSize
-     *      - rotatedFileFormat
-     *      - zipRotatedFiles
-     *      - ...more options in the parent class, check it out
+     * - file
+     * - isFileRotationEnabled
+     * - maxFileSize
+     * - rotatedFileFormat
+     * - zipRotatedFiles
+     * - ...more options in the parent class, check it out
      *
      * See the corresponding properties of this class for more info.
      *

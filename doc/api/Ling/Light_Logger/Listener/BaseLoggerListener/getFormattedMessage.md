@@ -53,7 +53,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [BaseLoggerListener::getFormattedMessage](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/BaseLoggerListener.php#L89-L107)
+See the source code for method [BaseLoggerListener::getFormattedMessage](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/BaseLoggerListener.php#L91-L109)
 
 
 See Also

@@ -60,7 +60,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [BaseLoggerListener::configure](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/BaseLoggerListener.php#L67-L75)
+See the source code for method [BaseLoggerListener::configure](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/BaseLoggerListener.php#L69-L77)
 
 
 See Also
