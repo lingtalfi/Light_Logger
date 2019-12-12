@@ -16,12 +16,13 @@ Description
 ================
 
 
-public [LightLastMessageFileLoggerListener::listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLastMessageFileLoggerListener/listen.md)(string $msg, string $channel) : void
+public [LightLastMessageFileLoggerListener::listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLastMessageFileLoggerListener/listen.md)($msg, string $channel) : void
 
 
 
 
 Reacts to the given logger message in a specific way.
+Note: the message can be of any type (string, object, ...).
 
 
 

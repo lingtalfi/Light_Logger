@@ -32,7 +32,7 @@ Class synopsis
 abstract class <span class="pl-k">LightLoggerListenerInterface</span>  {
 
 - Methods
-    - abstract public [listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLoggerListenerInterface/listen.md)(string $msg, string $channel) : void
+    - abstract public [listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLoggerListenerInterface/listen.md)($msg, string $channel) : void
 
 }
 

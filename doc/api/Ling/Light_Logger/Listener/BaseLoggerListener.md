@@ -34,7 +34,7 @@ abstract class <span class="pl-k">BaseLoggerListener</span> implements [LightLog
     - protected [getFormattedMessage](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/BaseLoggerListener/getFormattedMessage.md)(string $channel, $msg) : string
 
 - Inherited methods
-    - abstract public [LightLoggerListenerInterface::listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLoggerListenerInterface/listen.md)(string $msg, string $channel) : void
+    - abstract public [LightLoggerListenerInterface::listen](https://github.com/lingtalfi/Light_Logger/blob/master/doc/api/Ling/Light_Logger/Listener/LightLoggerListenerInterface/listen.md)($msg, string $channel) : void
 
 }
 

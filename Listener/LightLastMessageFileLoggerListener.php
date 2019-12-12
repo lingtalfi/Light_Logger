@@ -50,7 +50,7 @@ class LightLastMessageFileLoggerListener extends BaseLoggerListener implements L
     /**
      * @implementation
      */
-    public function listen(string $msg, string $channel)
+    public function listen($msg, string $channel)
     {
         $msg = $this->getFormattedMessage($channel, $msg);
         FileSystemTool::mkfile($this->file, $msg . PHP_EOL);

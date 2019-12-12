@@ -97,6 +97,10 @@ logger:
 History Log
 =============
 
+- 1.8.0 -- 2019-12-12
+
+    - update LightLoggerListenerInterface->listen, the msg argument can now be of any type 
+    
 - 1.7.2 -- 2019-12-12
 
     - fix BaseLoggerListener->configure documentation comment markdown formatting 
