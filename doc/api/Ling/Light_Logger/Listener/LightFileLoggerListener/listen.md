@@ -59,7 +59,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightFileLoggerListener::listen](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L163-L196)
+See the source code for method [LightFileLoggerListener::listen](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightFileLoggerListener.php#L163-L195)
 
 
 See Also

@@ -165,7 +165,6 @@ class LightFileLoggerListener extends BaseLoggerListener
 
         $msg = $this->getFormattedMessage($channel, $msg);
 
-        a($msg);
         // first log
         FileTool::append($msg . PHP_EOL, $this->file);
 

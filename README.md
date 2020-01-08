@@ -97,6 +97,10 @@ logger:
 History Log
 =============
 
+- 1.8.2 -- 2020-01-08
+
+    - fix LightFileLoggerListener->listen printing debug string (typo) 
+
 - 1.8.1 -- 2020-01-08
 
     - fix LightLoggerService->dispatch not handling * channel correctly (functional typo) 
