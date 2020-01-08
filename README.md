@@ -97,6 +97,10 @@ logger:
 History Log
 =============
 
+- 1.8.1 -- 2020-01-08
+
+    - fix LightLoggerService->dispatch not handling * channel correctly (functional typo) 
+    
 - 1.8.0 -- 2019-12-12
 
     - update LightLoggerListenerInterface->listen, the msg argument can now be of any type 

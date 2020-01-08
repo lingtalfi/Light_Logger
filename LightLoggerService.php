@@ -149,7 +149,7 @@ class LightLoggerService implements UniversalLoggerInterface
 
         // handling the * symbol
         foreach ($this->listeners as $chan => $listeners) {
-            if (0 === strpos('*', $chan)) {
+            if (0 === strpos($chan, '*')) {
                 if ("*" !== $chan) {
                     list($asterisk, $sMinus) = explode('-', $chan);
                     $minus = explode(",", $sMinus);
@@ -157,7 +157,6 @@ class LightLoggerService implements UniversalLoggerInterface
                         continue;
                     }
                 }
-
 
                 foreach ($listeners as $listener) {
                     call_user_func($listener, $msg, $channel);
