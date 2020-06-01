@@ -1,6 +1,6 @@
 Light_Logger
 ===========
-2019-08-01
+2019-08-01 -> 2020-06-01
 
 
 
@@ -97,6 +97,10 @@ logger:
 History Log
 =============
 
+- 1.9.0 -- 2020-06-01
+
+    - update LightFileLoggerListener, now accepts the {date} tag 
+    
 - 1.8.2 -- 2020-01-08
 
     - fix LightFileLoggerListener->listen printing debug string (typo) 
