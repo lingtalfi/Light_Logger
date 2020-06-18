@@ -54,7 +54,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightCleanableFileLoggerListener::configure](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightCleanableFileLoggerListener.php#L58-L65)
+See the source code for method [LightCleanableFileLoggerListener::configure](https://github.com/lingtalfi/Light_Logger/blob/master/Listener/LightCleanableFileLoggerListener.php#L61-L68)
 
 
 See Also

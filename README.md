@@ -97,6 +97,10 @@ logger:
 History Log
 =============
 
+- 1.11.1 -- 2020-06-18
+
+    - update LightCleanableFileLoggerListener, add class comment
+    
 - 1.11.0 -- 2020-06-18
 
     - add LightCleanableFileLoggerListener class

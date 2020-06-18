@@ -19,6 +19,9 @@ The LightCleanableFileLoggerListener class.
 
 The idea behind this class is that you can clean the log at any moment (meaning emptying the log file).
 
+In order to do so, set the message of the log to --clean-- (this is a special string that signals
+the logger to clean the current file).
+
 
 
 Class synopsis
