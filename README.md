@@ -1,6 +1,6 @@
 Light_Logger
 ===========
-2019-08-01 -> 2020-06-01
+2019-08-01 -> 2020-06-18
 
 
 
@@ -97,6 +97,10 @@ logger:
 History Log
 =============
 
+- 1.10.0 -- 2020-06-18
+
+    - update LightLastMessageFileLoggerListener, now accepts the file option like LightFileLoggerListener
+    
 - 1.9.0 -- 2020-06-01
 
     - update LightFileLoggerListener, now accepts the {date} tag 
