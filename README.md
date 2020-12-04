@@ -97,6 +97,10 @@ logger:
 History Log
 =============
 
+- 1.11.4 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.11.3 -- 2020-11-30
 
     - update conception notes
