@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Ling\Light_Logger;
+namespace Ling\Light_Logger\Service;
 
 
-use Ling\ArrayToString\ArrayToStringTool;
-use Ling\Bat\DebugTool;
-use Ling\Bat\ExceptionTool;
+use Ling\BabyYaml\BabyYamlUtil;
+use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_Logger\Listener\LightLoggerListenerInterface;
+use Ling\SicTools\HotServiceResolver;
 use Ling\UniversalLogger\UniversalLoggerInterface;
 
 /**
@@ -62,6 +62,14 @@ use Ling\UniversalLogger\UniversalLoggerInterface;
 class LightLoggerService implements UniversalLoggerInterface
 {
 
+
+    /**
+     * This property holds the container for this instance.
+     * @var ?LightServiceContainerInterface
+     */
+    private ?LightServiceContainerInterface $container;
+
+
     /**
      * This property holds the listeners.
      * It's an array of channel name => listeners.
@@ -70,11 +78,13 @@ class LightLoggerService implements UniversalLoggerInterface
      *
      * @var array
      */
-    protected $listeners;
+    protected array $listeners;
 
-
-
-
+    /**
+     * This property holds the listeners registered with the open registration system.
+     * @var array
+     */
+    private array $openListeners;
 
 
     /**
@@ -83,6 +93,18 @@ class LightLoggerService implements UniversalLoggerInterface
     public function __construct()
     {
         $this->listeners = [];
+        $this->openListeners = [];
+        $this->container = null;
+    }
+
+    /**
+     * Sets the container.
+     *
+     * @param LightServiceContainerInterface $container
+     */
+    public function setContainer(LightServiceContainerInterface $container)
+    {
+        $this->container = $container;
     }
 
 
@@ -122,7 +144,6 @@ class LightLoggerService implements UniversalLoggerInterface
     }
 
 
-
     /**
      * @implementation
      */
@@ -140,6 +161,48 @@ class LightLoggerService implements UniversalLoggerInterface
      */
     protected function dispatch(string $channel, $msg)
     {
+
+        //--------------------------------------------
+        // OPEN SYSTEM
+        //--------------------------------------------
+
+        $channelFile = $this->container->getApplicationDir() . "/config/open/Ling.Light_Logger/channels/$channel.byml";
+
+        if (true === file_exists($channelFile)) {
+
+
+            $o = new HotServiceResolver();
+
+            $arr = BabyYamlUtil::readFile($channelFile);
+
+
+            // replacing ${app_dir} manually
+            $appDir = $this->container->getApplicationDir();
+            array_walk_recursive($arr, function (&$v) use ($appDir) {
+                if (true === is_string($v)) {
+                    $v = str_replace('${app_dir}', $appDir, $v);
+                }
+            });
+
+
+            foreach ($arr as $planetDotName => $entries) {
+                foreach ($entries as $instanceId => $sicBlock) {
+                    if (true === array_key_exists($instanceId, $this->openListeners)) {
+                        $listener = $this->openListeners[$instanceId];
+                    } else {
+                        $listener = $o->getService($sicBlock);
+                        $listener = [$listener, "listen"];
+                        $this->openListeners[$instanceId] = $listener;
+                    }
+                    call_user_func($listener, $msg, $channel);
+                }
+            }
+        }
+
+
+        //--------------------------------------------
+        // CLOSE SYSTEM
+        //--------------------------------------------
         if (array_key_exists($channel, $this->listeners)) {
             $listeners = $this->listeners[$channel];
             foreach ($listeners as $listener) {
@@ -151,7 +214,7 @@ class LightLoggerService implements UniversalLoggerInterface
         foreach ($this->listeners as $chan => $listeners) {
             if (0 === strpos($chan, '*')) {
                 if ("*" !== $chan) {
-                    list($asterisk, $sMinus) = explode('-', $chan);
+                    list($asterisk, $sMinus) = explode('-', $chan, 2);
                     $minus = explode(",", $sMinus);
                     if (in_array($chan, $minus, true)) {
                         continue;
