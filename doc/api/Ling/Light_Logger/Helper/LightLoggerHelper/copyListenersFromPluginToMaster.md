@@ -54,7 +54,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightLoggerHelper::copyListenersFromPluginToMaster](https://github.com/lingtalfi/Light_Logger/blob/master/Helper/LightLoggerHelper.php#L23-L66)
+See the source code for method [LightLoggerHelper::copyListenersFromPluginToMaster](https://github.com/lingtalfi/Light_Logger/blob/master/Helper/LightLoggerHelper.php#L24-L66)
 
 
 See Also

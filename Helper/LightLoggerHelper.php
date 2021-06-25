@@ -4,6 +4,7 @@
 namespace Ling\Light_Logger\Helper;
 
 use Ling\BabyYaml\BabyYamlUtil;
+use Ling\Bat\FileSystemTool;
 use Ling\Light_Logger\Exception\LightLoggerException;
 
 /**
@@ -24,8 +25,7 @@ class LightLoggerHelper
     {
         $listenersFile = $appDir . "/config/data/$planetDotName/Ling.Light_Logger/listeners.byml";
         if (true === file_exists($listenersFile)) {
-            $c = file_get_contents($listenersFile);
-            $arr = BabyYamlUtil::readFile($c);
+            $arr = BabyYamlUtil::readFile($listenersFile);
 
 
             foreach ($arr as $index => $item) {
@@ -80,8 +80,7 @@ class LightLoggerHelper
     {
         $listenersFile = $appDir . "/config/data/$planetDotName/Ling.Light_Logger/listeners.byml";
         if (true === file_exists($listenersFile)) {
-            $c = file_get_contents($listenersFile);
-            $arr = BabyYamlUtil::readFile($c);
+            $arr = BabyYamlUtil::readFile($listenersFile);
 
 
             foreach ($arr as $item) {
@@ -101,7 +100,12 @@ class LightLoggerHelper
                                 $dstArr = BabyYamlUtil::readFile($dstFile);
                                 if (true === array_key_exists($planetDotName, $dstArr)) {
                                     unset($dstArr[$planetDotName]);
-                                    BabyYamlUtil::writeFile($dstArr, $dstFile);
+
+                                    if (true === empty($dstArr)) {
+                                        FileSystemTool::remove($dstFile);
+                                    } else {
+                                        BabyYamlUtil::writeFile($dstArr, $dstFile);
+                                    }
                                 }
                             }
                         }

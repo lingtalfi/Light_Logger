@@ -57,7 +57,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightLoggerHelper::removeListenersFromMaster](https://github.com/lingtalfi/Light_Logger/blob/master/Helper/LightLoggerHelper.php#L79-L113)
+See the source code for method [LightLoggerHelper::removeListenersFromMaster](https://github.com/lingtalfi/Light_Logger/blob/master/Helper/LightLoggerHelper.php#L79-L117)
 
 
 See Also

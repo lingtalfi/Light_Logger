@@ -106,6 +106,10 @@ logger:
 History Log
 =============
 
+- 1.11.11 -- 2021-06-25
+
+    - fix functional typo in LightLoggerHelper
+  
 - 1.11.10 -- 2021-06-25
 
     - add open registration system
