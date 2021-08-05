@@ -166,6 +166,16 @@ In it, put your listeners like this (each listener has its own top level entry):
 
 
 
+Common channels
+---------
+2021-06-25
+
+
+
+I recommend using the following channels:
+
+- **error**: the error channel is explained in the [error logging convention](https://github.com/lingtalfi/TheBar/blob/master/discussions/error-logging-convention.md) document.
+
 
 
 

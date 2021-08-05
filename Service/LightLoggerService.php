@@ -157,7 +157,7 @@ class LightLoggerService implements UniversalLoggerInterface
      *
      *
      * @param string $channel
-     * @param string|object $msg
+     * @param mixed $msg
      */
     protected function dispatch(string $channel, $msg)
     {
@@ -172,6 +172,23 @@ class LightLoggerService implements UniversalLoggerInterface
 
 
             $o = new HotServiceResolver();
+            $o->setCustomResolveNotationCallback(function ($value, &$isCustomNotation = false) {
+                if (is_string($value)) { // value could be anything
+                    if ('@container()' === $value) {
+                        $isCustomNotation = true;
+                        return $this->container;
+                    } elseif (
+                        0 === strpos($value, '@s')
+                        && preg_match('!@service\(([a-zA-Z._0-9]*)\)!', $value, $match)
+                    ) {
+                        $isCustomNotation = true;
+                        $service = $match[1];
+                        return $this->container->get($service);
+                    }
+                }
+
+                return null;
+            });
 
             $arr = BabyYamlUtil::readFile($channelFile);
 
@@ -181,6 +198,7 @@ class LightLoggerService implements UniversalLoggerInterface
             array_walk_recursive($arr, function (&$v) use ($appDir) {
                 if (true === is_string($v)) {
                     $v = str_replace('${app_dir}', $appDir, $v);
+
                 }
             });
 
@@ -235,7 +253,7 @@ class LightLoggerService implements UniversalLoggerInterface
     /**
      * Dispatches a log message on the "trace" channel.
      *
-     * @param string|object $msg
+     * @param mixed $msg
      * A string or an object with the __toString method.
      */
     public function trace($msg)
@@ -246,7 +264,7 @@ class LightLoggerService implements UniversalLoggerInterface
     /**
      * Dispatches a log message on the "debug" channel.
      *
-     * @param string|object $msg
+     * @param mixed $msg
      * A string or an object with the __toString method.
      */
     public function debug($msg)
@@ -257,7 +275,7 @@ class LightLoggerService implements UniversalLoggerInterface
     /**
      * Dispatches a log message on the "notice" channel.
      *
-     * @param string|object $msg
+     * @param mixed $msg
      * A string or an object with the __toString method.
      */
     public function notice($msg)
@@ -268,7 +286,7 @@ class LightLoggerService implements UniversalLoggerInterface
     /**
      * Dispatches a log message on the "warn" channel.
      *
-     * @param string|object $msg
+     * @param mixed $msg
      * A string or an object with the __toString method.
      */
     public function warn($msg)
@@ -280,7 +298,7 @@ class LightLoggerService implements UniversalLoggerInterface
     /**
      * Dispatches a log message on the "error" channel.
      *
-     * @param string|object $msg
+     * @param mixed $msg
      * A string or an object with the __toString method.
      */
     public function error($msg)
@@ -292,7 +310,7 @@ class LightLoggerService implements UniversalLoggerInterface
     /**
      * Dispatches a log message on the "fatal" channel.
      *
-     * @param string|object $msg
+     * @param mixed $msg
      * A string or an object with the __toString method.
      */
     public function fatal($msg)

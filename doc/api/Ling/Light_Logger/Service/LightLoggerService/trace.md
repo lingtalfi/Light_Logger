@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightLoggerService::trace](https://github.com/lingtalfi/Light_Logger/blob/master/Service/LightLoggerService.php#L241-L244)
+See the source code for method [LightLoggerService::trace](https://github.com/lingtalfi/Light_Logger/blob/master/Service/LightLoggerService.php#L259-L262)
 
 
 See Also

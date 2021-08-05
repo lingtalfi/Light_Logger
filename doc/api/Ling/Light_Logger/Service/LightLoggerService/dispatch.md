@@ -53,7 +53,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightLoggerService::dispatch](https://github.com/lingtalfi/Light_Logger/blob/master/Service/LightLoggerService.php#L162-L229)
+See the source code for method [LightLoggerService::dispatch](https://github.com/lingtalfi/Light_Logger/blob/master/Service/LightLoggerService.php#L162-L247)
 
 
 See Also

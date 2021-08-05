@@ -1,6 +1,6 @@
 Light_Logger
 ===========
-2019-08-01 -> 2021-06-25
+2019-08-01 -> 2021-08-05
 
 
 
@@ -106,6 +106,12 @@ logger:
 History Log
 =============
 
+- 1.11.12 -- 2021-08-05
+
+    - fix service not recognizing @container and @service notation for open registration
+    - update conception notes, add common channels section
+    - update docblock comments of main dispatch methods (msg is of type mixed)
+  
 - 1.11.11 -- 2021-06-25
 
     - fix functional typo in LightLoggerHelper
